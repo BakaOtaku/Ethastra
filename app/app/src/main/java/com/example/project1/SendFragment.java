@@ -44,9 +44,6 @@ import androidx.fragment.app.Fragment;
 
 public class SendFragment extends Fragment {
 
-//    private String passwordFroSMSencryption = "1234567890ABCDEF";
-//    private String privateKey = "97d8cb40d55f97fa4a9dcbb9d89b159128b95043edfd835467553f3b5c69d7af";
-
     private static final String AES_MODE = "AES/ECB/PKCS5Padding";
 
     EditText etSenderPublicKey, etAmount;
@@ -54,9 +51,7 @@ public class SendFragment extends Fragment {
     Button sendBtn;
     String smsString = null, encryptText = null, actualText =null;
     KeyStore keyStore = null;
-
     EnCryptor encryptor;
-
     String passforSMSEncruption ;
 
     @Nullable
@@ -81,7 +76,7 @@ public class SendFragment extends Fragment {
             public void onClick(View v) {
                 encryptText = etSenderPublicKey.getText().toString().trim() + ":" + etAmount.getText().toString().trim();
                 try {
-                    smsString = encrypt(encryptText, passforSMSEncruption);
+                    smsString = encrypt(encryptText, passforSMSEncruption).trim();
                     passforSMSEncruption = null;
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -125,12 +120,10 @@ public class SendFragment extends Fragment {
 
     private String decrypt(String encryptedText, String password) throws  Exception{
         SecretKeySpec key =  generateKey(password);
-        Log.i("check5", String.valueOf(key));
         byte[] decodedVal = Base64.decode(encryptedText, Base64.DEFAULT);
         Cipher cipher = Cipher.getInstance(AES_MODE);
         cipher.init(Cipher.DECRYPT_MODE,key);
         String decryptedValText = new String(cipher.doFinal(decodedVal));
-        Log.i("check7", decryptedValText);
         return decryptedValText;
     }
 

@@ -45,7 +45,7 @@ public class UserLogin extends AppCompatActivity {
     private String BASE_URL = "https://offline-trading.herokuapp.com/login";
     private EnCryptor encryptor;
     private DeCryptor decryptor;
-    String smsEnPass = "null";
+    String smsEnPass = null;
 
     OkHttpClient client = new OkHttpClient();
 
@@ -77,14 +77,19 @@ public class UserLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                try {
-                    storePassword();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
                 userLogin();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        try {
+            storePassword();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void signupBtnTemp(View view) {
@@ -128,11 +133,8 @@ public class UserLogin extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        publicKey = temp;
-        smsEnPass = "1234567890ABCDEF";
-
-
-        Log.i("check34532", "userLogin: "+publicKey);
+        smsEnPass = temp.substring(temp.indexOf(':')+1);
+        publicKey = temp.substring(0,temp.indexOf(':'));
 
         Utils.saveStringInUserData(getApplicationContext(), "phone", phone);
         Utils.saveStringInUserData(getApplicationContext(), "pass", password);

@@ -46,30 +46,5 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_phone"
         android:gravity="center_horizontal"/>
 
-    <TextView
-        android:id="@+id/text_view_balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/textview"
-        android:textSize="22sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/text_view_public_key"
-        app:layout_constraintStart_toStartOf="@+id/text_view_public_key"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_public_key" />
-
-    <Button
-        android:id="@+id/view_balance_btn"
-        android:layout_width="0dp"
-        app:layout_constraintWidth_percent="0.6"
-        android:layout_height="wrap_content"
-        android:text="@string/view_balance"
-        android:textColor="#fff"
-        android:background="@drawable/btn_bg_solid"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_balance" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
