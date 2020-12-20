@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">project1</string>
+    <string name="app_name">Ethastra</string>
 
     <string name="title1">Pay Offline</string>
     <string name="title2">Encrypted SMS</string>
     <string name="title3">Secure Payment</string>
 
-    <string name="discription1">this is the discription for the Pay Offline message</string>
-    <string name="discription2">this is the discription for the Encrypted SMS message</string>
-    <string name="discription3">this is the discription for the Secure Payments</string>
+    <string name="discription1">Using power of encryption and blockchain, trade cryptocurrencies offline without internet.</string>
+    <string name="discription2">All the messages are end to end encrypted. No service provider or police will be able to get your personal information.</string>
+    <string name="discription3">On our server, we are handling all the messages and making secure messages with proper response.</string>
 
     <string name="next">Next</string>
     <string name="skip">Skip</string>
