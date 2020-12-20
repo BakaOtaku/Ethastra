@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSignup">
+
+
+    <ImageView
+        android:id="@+id/imageViewSignup"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/payment_via_phone" />
+
+    <EditText
+        android:id="@+id/editTextSignupName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_marginTop="32dp"
+        android:hint="Name"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSignup" />
+
+    <EditText
+        android:id="@+id/editTextSignupPhone"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:hint="Phone"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSignupName"
+        app:layout_constraintStart_toStartOf="@+id/editTextSignupName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignupName" />
+
+
+    <EditText
+        android:id="@+id/editTextTextSignupPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSignupPhone"
+        app:layout_constraintStart_toStartOf="@+id/editTextSignupPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignupPhone" />
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:background="@drawable/btn_bg_solid"
+        android:textColor="#fff"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextSignupPassword"
+        app:layout_constraintVertical_bias="0.25" />
+
+
+    <TextView
+        android:id="@+id/registeredlogintextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Already Registered ? Login"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/signup_btn"
+        app:layout_constraintStart_toStartOf="@+id/signup_btn"
+        app:layout_constraintTop_toBottomOf="@+id/signup_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

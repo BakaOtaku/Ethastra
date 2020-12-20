@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">project1</string>
+
+    <string name="title1">Pay Offline</string>
+    <string name="title2">Encrypted SMS</string>
+    <string name="title3">Secure Payment</string>
+
+    <string name="discription1">this is the discription for the Pay Offline message</string>
+    <string name="discription2">this is the discription for the Encrypted SMS message</string>
+    <string name="discription3">this is the discription for the Secure Payments</string>
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+
+    <string name="get_started">Get Started</string>
+    <string name="login">Login</string>
+    <string name="get_registered">New here? Signup</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="public_key">Public Key</string>
+    <string name="textview">TextView</string>
+    <string name="view_balance">View Balance</string>
+</resources>
