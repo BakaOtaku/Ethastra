@@ -39,8 +39,8 @@ public class BuyFragment extends Fragment {
         amountToBuy = view.findViewById(R.id.et_amount_to_buy);
 
         UserLogin userLogin = new UserLogin();
-
         passforSMSEncruption = userLogin.smsEncryptionPass;
+
         sendSMSToBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -76,7 +76,6 @@ public class UserLogin extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 userLogin();
             }
         });
@@ -85,11 +84,6 @@ public class UserLogin extends AppCompatActivity {
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        try {
-            storePassword();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void signupBtnTemp(View view) {
@@ -128,7 +122,6 @@ public class UserLogin extends AppCompatActivity {
         String temp = null;
         try {
             temp = run(BASE_URL);
-            Log.i("check34532", "userLogin: "+BASE_URL);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -140,6 +133,7 @@ public class UserLogin extends AppCompatActivity {
         Utils.saveStringInUserData(getApplicationContext(), "pass", password);
 
         if (!temp.equals("Authentication failed")) {
+
             if (phone.length() != 10) {
                 editTextPhone.requestFocus();
                 Toast.makeText(UserLogin.this, "Enter Valid Phone Number", Toast.LENGTH_SHORT).show();
@@ -153,6 +147,11 @@ public class UserLogin extends AppCompatActivity {
                 editTextPassword.setError("Password should be atleast 6 character long");
                 editTextPassword.requestFocus();
                 return;
+            }
+            try {
+                storePassword();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             Intent intent = new Intent(UserLogin.this, UserHome.class);
             startActivity(intent);
