@@ -55,10 +55,10 @@ If user wants to buy then it will fetch the mobile number of the SMS sender and 
 
 ## Team
 
-- [ 👨🏻‍💻 Aniket Dixit](https://github.com/fuzious)
+- [ 👨🏻‍💻 Aniket Dixit](https://github.com/dixitaniket)
 - [ 👨🏻‍🎓 Arpit Srivastava](https://github.com/fuzious)
-- [ 👨🏻‍💻 Vishnu Rahar](https://github.com/fuzious)
-- [ 👨🏻‍💻 Souhard Swami](https://github.com/fuzious)
+- [ 👨🏻‍💻 Vishnu Rahar](https://github.com/vishnurahar)
+- [ 👨🏻‍💻 Souhard Swami](https://github.com/souhardswami)
 - [ 🌊 Aman Raj](https://github.com/AmanRaj1608)
 
 
