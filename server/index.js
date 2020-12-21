@@ -184,11 +184,24 @@ app.use('/twillioTrigger', async (req, res) => {
                     }
                 })
                 console.log(res);
+                // send acknowledgement
+                await client.messages.create({
+                    body: "Transaction Successful !!!",
+                    to: from,
+                    from: '+12517650405'
+                })
+                    .then((message) => console.log(message.sid));
                 // give ether
                 buyEther(results.public_key, resultMessage);
             })
             .catch(err => {
                 console.log("phone number not found");
+                await client.messages.create({
+                    body: "phone number not found",
+                    to: from,
+                    from: '+12517650405'
+                })
+                    .then((message) => console.log(message.sid));
                 res.status(409).send('phone number not found');
             })
     }
